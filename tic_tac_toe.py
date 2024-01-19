@@ -153,7 +153,7 @@ with tab1:
             df_old = pd.read_csv("Score.txt", sep="\s+",header = 0)
             #st.dataframe(df_old)
             df = pd.concat([df, df_old], axis=0)
-            df.reset_index()
+            df.reset_index(drop=True, inplace=True)
             os.remove("Score.txt")
 
         #st.dataframe(df)
