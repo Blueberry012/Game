@@ -155,7 +155,7 @@ with tab1:
             df = pd.concat([df, df_old], axis=0)
             os.remove("Score.txt")
 
-        st.dataframe(df)
+        #st.dataframe(df)
         path = r'Score.txt'
         with open(path, 'a') as f:
             df_string = df.to_string(header=True, index=True)
